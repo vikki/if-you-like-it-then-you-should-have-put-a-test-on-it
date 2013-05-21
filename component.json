@@ -3,5 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "reveal.js": "~2.4.0"
+  },
+  "devDependencies": {
+    "impress.js": "~0.5.3",
+    "jquery": "~2.0.0"
   }
 }
