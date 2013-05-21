@@ -1,0 +1,7 @@
+{
+  "name": "presentations",
+  "version": "0.0.0",
+  "dependencies": {
+    "reveal.js": "~2.4.0"
+  }
+}
