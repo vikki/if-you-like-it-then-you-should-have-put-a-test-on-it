@@ -7,3 +7,4 @@ They're all GH pages, so you can view them properly online here :
 
 1) Basic SQL Training - http://vikki.github.io/presentations/sql
 2) Web Components     - http://vikki.github.io/presentations/webComponents
+3) Promises           - http://vikki.github.io/presentations/promises
