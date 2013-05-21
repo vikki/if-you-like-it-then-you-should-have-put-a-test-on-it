@@ -10,12 +10,12 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="../components/reveal.js/css/reveal.min.css" type="text/css">
-        <link rel="stylesheet" href="../components/reveal.js/css/theme/default.css" id="theme" type="text/css"><!-- For syntax highlighting -->
-        <link rel="stylesheet" href="../components/reveal.js/lib/css/zenburn.css" type="text/css"><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <link rel="stylesheet" href="components/reveal.js/css/reveal.min.css" type="text/css">
+        <link rel="stylesheet" href="components/reveal.js/css/theme/default.css" id="theme" type="text/css"><!-- For syntax highlighting -->
+        <link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css" type="text/css"><!-- If the query includes 'print-pdf', use the PDF print sheet -->
 
         <script type="text/javascript">
-document.write( '<link rel="stylesheet" href="../components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+document.write( '<link rel="stylesheet" href="components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
         </script><!--[if lt IE 9]>
         <script src="../components/reveal.js/lib/js/html5shiv.js"></script>
         <![endif]-->
@@ -61,8 +61,8 @@ document.write( '<link rel="stylesheet" href="../components/reveal.js/css/print/
 
 
 
-        <script src="../components/reveal.js/lib/js/head.min.js" type="text/javascript">
-</script><script src="../components/reveal.js/js/reveal.js" type="text/javascript">
+        <script src="components/reveal.js/lib/js/head.min.js" type="text/javascript">
+</script><script src="components/reveal.js/js/reveal.js" type="text/javascript">
 </script><script type="text/javascript">
 
             // Full list of configuration options available here:
@@ -78,12 +78,12 @@ document.write( '<link rel="stylesheet" href="../components/reveal.js/css/print/
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
-                    { src: '../components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                    { src: '../components/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: '../components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: '../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: '../components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: 'components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'components/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
                     // { src: '../components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
                 ]
             });
