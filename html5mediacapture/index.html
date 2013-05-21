@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            reveal.js - The HTML Presentation Framework
+        </title>
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../components/reveal.js/css/reveal.min.css" type="text/css">
+        <link rel="stylesheet" href="../components/reveal.js/css/theme/default.css" id="theme" type="text/css"><!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../components/reveal.js/lib/css/zenburn.css" type="text/css"><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+
+        <script type="text/javascript">
+document.write( '<link rel="stylesheet" href="../components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script><!--[if lt IE 9]>
+        <script src="../components/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section>
+                        <h1>
+                            <br>
+                        </h1>
+                        <h1>
+                            html5 media capture&nbsp;
+                        </h1>
+                        <div>
+                            look ma, no plugins!
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            wassat?
+                        </h2>
+                        <div>
+                            <p>
+                                <br>
+                            </p>
+                            <p>
+                                <br>
+                            </p>
+                            <p>
+                                <br>
+                            </p>
+                            <p>
+                                audio and video capture without plugins, boom!
+                            </p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            <br>
+                        </h2>
+                        <h2>
+                            <br>
+                        </h2>
+                        <h2>
+                            <br>
+                        </h2>
+                        <h2>
+                            fin.
+                        </h2>
+                        <div>
+                            (not really)
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            a secret history
+                        </h2>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>3rd spec - previous contenders:
+                                </li>
+                                <li>
+                                    <pre style="font-size: 13.0px;margin-top: 1.0em;margin-bottom: 1.0em;padding: 1.0em;color: white;background-color: rgb(68,68,68);font-style: normal;font-variant: normal;line-height: 16.0px;">
+<code style="font-size: 1.0em;background-color: transparent;padding: 0.0px;">&lt;input type="file" accept="video/*;capture=camcorder"&gt;</code>
+</pre>
+                                </li>
+                                <li>
+                                    <pre style="font-size: 13.0px;margin-top: 1.0em;margin-bottom: 1.0em;padding: 1.0em;color: white;background-color: rgb(68,68,68);font-style: normal;font-variant: normal;line-height: 16.0px;"><code style="font-size: 1.0em;background-color: transparent;padding: 0.0px;">&lt;device type="media" onchange="update(this.data)"&gt;&lt;/device&gt;</code>
+</pre>
+                                </li>
+                                <li>Part of Web RTC (even shinier-er)
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            how?
+                        </h2>
+                        <div style="text-align: left;">
+                            <span style="line-height: 1.2em;letter-spacing: -0.02em;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;function onSuccess(stream) {</span>
+                        </div>
+                        <div style="text-align: left;">
+                            <span style="line-height: 1.2em;letter-spacing: -0.02em;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // do stuff</span>
+                        </div>
+                        <div style="text-align: left;">
+                            <span style="line-height: 1.2em;letter-spacing: -0.02em;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span>
+                        </div>
+                        <div style="text-align: left;">
+                            <span style="letter-spacing: -0.02em;"><br></span>
+                        </div>
+                        <div style="text-align: left;">
+                            <span style="letter-spacing: -0.02em;"><br></span>
+                        </div>
+                        <div style="text-align: left;">
+                            <span style="letter-spacing: -0.02em;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;navigator.getUserMedia({</span><br>
+                        </div>
+                        <div>
+                            <p style="text-align: left;">
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; video: true,
+                            </p>
+                            <p style="text-align: left;">
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; audio: true
+                            </p>
+                            <p style="text-align: left;">
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },
+                            </p>
+                            <p style="text-align: left;">
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; onSuccess,
+                            </p>
+                            <p style="text-align: left;">
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; onFail);
+                            </p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            how, really?
+                        </h2>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            <div>
+                                <div style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;background-color: rgb(43,43,43);text-align: left;">
+                                    <span style="line-height: 1.2em;letter-spacing: -0.02em;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; function onSuccess(stream) {</span>
+                                </div>
+                                <div style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;background-color: rgb(43,43,43);text-align: left;">
+                                    <div style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;text-align: center;">
+                                        &nbsp; var video = document.querySelector('video');
+                                    </div>
+                                    <div style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;text-align: center;">
+                                        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; video.src = window.URL.createObjectURL(stream);
+                                    </div>
+                                </div>
+                                <div style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;background-color: rgb(43,43,43);text-align: left;">
+                                    <span style="line-height: 1.2em;letter-spacing: -0.02em;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span>
+                                </div>
+                                <div style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;background-color: rgb(43,43,43);text-align: left;">
+                                    <span style="line-height: 1.2em;letter-spacing: -0.02em;"><br></span>
+                                </div>
+                                <div style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;background-color: rgb(43,43,43);text-align: left;">
+                                    <span style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (navigator.webkitGetUserMedia) {</span> <span style="letter-spacing: -0.02em;"><br></span>
+                                </div>
+                                <div style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;background-color: rgb(43,43,43);text-align: left;">
+                                    <span style="letter-spacing: -0.02em;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; navigator.webkitGetUserMedia({</span><br>
+                                </div>
+                                <div style="font-size: 36.0px;font-style: normal;font-variant: normal;line-height: 43.1875px;background-color: rgb(43,43,43);">
+                                    <p style="text-align: left;">
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; video: true
+                                    </p>
+                                    <p style="text-align: left;">
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },
+                                    </p>
+                                    <p style="text-align: left;">
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; onSuccess,
+                                    </p>
+                                    <p style="text-align: left;">
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; onFail);<br>
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            i think you'll find it's a bit more complicated than that
+                        </h2>
+                        <div>
+                            <img src="http://i.imgur.com/ZV7UpdX.png" title="" style=""><br>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    <span style="text-align: center;letter-spacing: -0.02em;">prefixes</span><br>
+                                </li>
+                                <li>
+                                    <span style="text-align: center;letter-spacing: -0.02em;">Slightly different implementations</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            moar compatibility
+                        </h2>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            ...but there's a&nbsp;<a href="https://github.com/addyosmani/getUserMedia.js">polyfill</a>&nbsp;(with Flash fallback :c )
+                        </div>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            Or you could fall back to an animated gif?
+                        </div>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            <img src="http://0-media-cdn.foolz.us/ffuuka/board/wsg/image/1353/82/1353824972749.gif" style=""><br>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            Security
+                        </h2>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Video Popup
+                                </li>
+                                <li>Favicon
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            so Why bother?
+                        </h2>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            <br>
+                        </div>
+                        <div>
+                            Cool demos!
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div><script src="../components/reveal.js/lib/js/head.min.js" type="text/javascript">
+</script><script src="../components/reveal.js/js/reveal.js" type="text/javascript">
+</script><script type="text/javascript">
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../components/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: '../components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+    </body>
+</html>
