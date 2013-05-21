@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            reveal.js - The HTML Presentation Framework
+        </title>
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../components/reveal.js/css/reveal.min.css" type="text/css">
+        <link rel="stylesheet" href="../components/reveal.js/css/theme/default.css" id="theme" type="text/css"><!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../components/reveal.js/lib/css/zenburn.css" type="text/css"><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+
+        <script type="text/javascript">
+document.write( '<link rel="stylesheet" href="../components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script><!--[if lt IE 9]>
+        <script src="../components/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+          ul {
+            list-style-type: none !important;
+            padding: 1em 0;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>
+                        Presentations
+                    </h1>
+                    <div>
+                        <ul>
+                            <li><a href="http://vikki.github.io/presentations/webcomponents">Web Components</a> - November 2012</li>
+                            <li><a href="http://vikki.github.io/presentations/promises">Promises </a>- Feb 2013</li>
+                            <li><a href="http://vikki.github.io/presentations/sql">Basic SQL</a> - March 2013</li>
+                            <li><a href="http://vikki.github.io/presentations/html5mediacapture">HTML5 Media Capture</a> - April 2013</li>
+                        </ul>
+
+                        <style>
+                            #gh:before {
+                                content: url('images/gh-mark.png');
+                                padding-right: 10px;
+                            }
+
+                            #gh a {
+                                vertical-align:baseline;
+                            }
+                        </style>
+
+                        <p id="gh">Source to all presentations lives on  <a href="https://github.com/vikki/presentations">Github</a> </p>
+                    </div>
+                </section>
+            </div>
+ 
+        </div>
+
+
+
+        <script src="../components/reveal.js/lib/js/head.min.js" type="text/javascript">
+</script><script src="../components/reveal.js/js/reveal.js" type="text/javascript">
+</script><script type="text/javascript">
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../components/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: '../components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+    </body>
+</html>
