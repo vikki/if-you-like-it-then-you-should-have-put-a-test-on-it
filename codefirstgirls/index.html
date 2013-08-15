@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+    <link href="../components/impress.js/css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    
+</head>
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<style>
+  .step {
+    text-align: center;
+  }
+ 
+  .code {
+    font-size: 38px;
+    text-align: left;
+  }
+
+  #codeSample pre{
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 24px;
+  }
+
+
+  #lightning {
+   position: absolute;
+   top: 0;
+   right: -270px;
+  }
+
+@-webkit-keyframes highlight {
+	0%, 100% {color: Black;}
+	50% {color: Red;}
+}
+
+@-webkit-keyframes flash {
+	0%, 50%, 100% {opacity :1;}
+	25%, 75% {opacity: 0;}
+}
+
+@-webkit-keyframes correct {
+  0%{ font-size: 100%;}
+  100% { font-size: 30%;}
+}
+
+.highlight{
+   -webkit-animation-name: highlight;
+   -webkit-animation-duration: 5s;
+}
+
+.hide {
+   display:none;
+}
+
+.pwniez {
+  width: 20%;
+}
+
+div[data-activate] {
+  -webkit-transition: all 5s ease-in-out;
+}
+
+</style>
+
+<div id="impress">
+        <div id="intro" class="step" data-x="1500" data-y="1000" data-rotate="0" data-scale="1">
+            <h1 class="center">code first:girls</h1>
+            <h1 class="center">being a dev!</h1>
+        </div>
+        <div id="description" class="step" data-x="3000" data-y="1000" data-rotate="0" data-scale="1">
+            <h2>what its like to be a dev</h2>
+            <h2>how best to work with devs</h2>
+        </div>
+        <div id="me_bg" class="step" data-x="4500" data-y="1000" data-rotate="0" data-scale="1">
+            <h2>7 years professional coding</h2>
+            <h2>lots of languages</h2>
+            <h2>different types of companies</h2>
+        </div>
+        <div id="me_now" class="step" data-x="6000" data-y="1000" data-rotate="0" data-scale="1">
+            <h2>full stack developer</h2>
+            <h2>coder dojo + code club</h2>
+            <h2>blogging + open source</h2>
+        </div>
+        <div>
+          <div id="work_like" class="step" data-x="0" data-y="1000" data-rotate="0" data-scale="1">
+              <h1>What is your work like?</h1> 
+          </div>
+        </div>
+        <div>
+          <div id="pairing" class="step" data-x="0" data-y="1500" data-rotate="0" data-scale="1">
+              <h2>pairing</h2>
+              <img src="images/cons.png" style="padding:20px"></img>
+          </div>
+          <div id="test_first" class="step" data-x="0" data-y="2000" data-rotate="0" data-scale="1">
+              <h2>define what "done" is before you start</h2> 
+          </div>
+          <div id="standups" class="step" data-x="0" data-y="2500" data-rotate="0" data-scale="1">
+              <h2>standups</h2>
+          </div>
+          <div id="iterations" class="step" data-x="0" data-y="3000" data-rotate="0" data-scale="1">
+              <h2 style="font-weight:bold; padding: 10px;">stories</h2>
+              <h2>define</h2>
+              <h2>prioritise</h2>
+              <h2>make</h2>
+              <h2>discuss</h2>
+          </div>
+      </div>
+      <div>
+          <div id="day_to_day" class="step" data-x="1000" data-y="3500" data-rotate="270" data-scale="1">
+              <h1>So what do you do, day to day?</h1> 
+          </div>
+          <div id="make_stuff" class="step" data-x="1500" data-y="3500" data-rotate="270" data-scale="1">
+              <h2>make stuff</h2> 
+              <h2>... but not very much of the time</h2> 
+          </div>
+          <div id="talking" class="step" data-x="2000" data-y="3500" data-rotate="270" data-scale="1">
+              <h2>its mostly talking!</h2>
+              <img src="images/thumb_people.jpeg" style="padding:20px"></img>
+          </div>
+          <div id="talking_planning" class="step" data-x="2500" data-y="3500" data-rotate="270" data-scale="1">
+            <h2>planning</h2>
+          </div>
+          <div id="talking_discussing" class="step" data-x="2700" data-y="3500" data-rotate="270" data-scale="1">
+            <h2>discussing</h2>
+          </div>
+          <div id="talking_through" class="step" data-x="2900" data-y="3500" data-rotate="270" data-scale="1">
+            <h2>talking through problems</h2>
+          </div>
+          <div id="talking_explaining" class="step" data-x="3100" data-y="3500" data-rotate="270" data-scale="1">
+            <h2>explaining what we made</h2>
+          </div>
+          <div id="talking_teaching" class="step" data-x="3300" data-y="3500" data-rotate="270" data-scale="1">
+            <h2>teaching each other</h2>
+          </div>
+          <div id="talking_anything" class="step" data-x="3500" data-y="3500" data-rotate="270" data-scale="1">
+            <h2>anything we can help with!</h2>
+          </div>
+              
+              
+        </div>
+
+        <div>
+          <div id="interaction" class="step" data-x="4000" data-y="2000" data-rotate="90" data-scale="1">
+              <h1>How do you interact with non-technical teams?</h1> 
+          </div>
+          <div id="tea_and_toast" class="step" data-x="3500" data-y="2000" data-rotate="90" data-scale="1">
+              <img src="images/toast_addict.png" alt="toast addict"></img>
+          </div>
+          <div id="interactions" class="step" data-x="3000" data-y="2000" data-rotate="90" data-scale="1">
+            <h2 style="font-weight:bold; padding: 10px">we need help understanding:</h1>
+            <ul>
+              <li>problems</li>
+              <li>workflow bottlenecks</li>
+              <li>ideas for improvements</li>
+              <li>how things are really used</li>
+              <li>what's important / urgent?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div id="how_does_coding_help" class="step" data-x="0" data-y="0" data-rotate="270" data-scale="1">
+              <h1>How does learning to code help me work with technical people?</h1> 
+          </div>
+          <div id="magic" class="step" data-x="500" data-y="0" data-rotate="270" data-scale="1">
+              <h2>its not magic</h2>
+              <img src="images/magic.gif" 
+                   alt="magic!"></img>
+          </div>
+          <div id="you_now_know" class="step" data-x="1000" data-y="0" data-rotate="270" data-scale="1">
+              <h1>You now have a better idea of :</h1>
+          </div>
+          <div id="easy_hard" class="step" data-x="1200" data-y="0" data-rotate="270" data-scale="1">
+              <h2>What's easy? What's hard?</h2>
+          </div>
+          <div id="realistic" class="step" data-x="1600" data-y="0" data-rotate="270" data-scale="1">
+              <h2>What's realistic?</h2>
+                  <h2>What's <span style="text-decoration:line-through">impossible</span> impractical?</h2>
+                  <h2>Quick wins</h2>
+                  <h2>Long term vision</h2>
+          </div>
+          <div id="disruptions" class="step" data-x="2000" data-y="0" data-rotate="270" data-scale="1">
+              <h2>disruptions</h2>
+          </div>
+          <div id="approach" class="step" data-x="2300" data-y="0" data-rotate="270" data-scale="1">
+              <h2>how to approach a technical problem</h2>
+          </div>
+          <div id="when_in_doubt" class="step" data-x="3000" data-y="0" data-rotate="270" data-scale="1">
+              <h2>when in doubt</h2>
+              <h2>we really like food :P</h2>
+              <img src="images/devs_heart_pizza.jpg" 
+                   alt="feed_us_papa_johns"></img>
+          </div>
+        </div>
+        <div id="thanks" class="step" data-x="1500" data-y="2200" data-rotate="0" data-scale="1">
+              <h1>thanks! and keep coding :D</h1>
+              <img src="images/femalecodertocat.png"></img>
+              <h1><a href="https://twitter.com/vikkiread">@vikkiread</a></h1>
+        </div>
+
+
+
+    
+        <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+        </div>
+</div>
+    
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="../components/jquery/jquery.js"></script>
+<script>
+(function() {
+  $('[data-activate]').addClass('hide');
+  var stepNo = 1;
+
+  function showNextStep() {
+      $('[data-activate]').addClass('hide');
+      $('[data-activate="' + stepNo + '"]').removeClass('hide').addClass('highlight');
+      stepNo++;
+  }
+
+  document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 72) { // h
+       showNextStep();
+    }
+  });
+}
+())
+</script>
+
+
+<script src="../components/impress.js/js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+
