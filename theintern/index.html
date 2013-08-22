@@ -203,6 +203,7 @@ div[data-activate] {
         </div>
         <div id="x_browser_woes" class="step" data-x="3300" data-y="3000" data-rotate="270" data-scale="1">
             <h1>x-browser woes</h1>
+            <img src="images/sad_ie.png" style="position:absolute; width:30%; left:0"></img>
         </div>
         <div id="unnecessary_java" class="step" data-x="4000" data-y="3000" data-rotate="270" data-scale="1">
             <h1>maven and java <span style="text-decoration: line-through">badness</span> redundant dependencies</h1>
@@ -268,6 +269,41 @@ div[data-activate] {
         alternatives
            - dalek - add lots more about this if poss
       -->
+
+        <div id="test_separation" class="step" data-x="3500" data-y="0" data-rotate="270" data-scale="1">
+            <img src="images/config_test_separation.png" alt="config / test separation">
+        </div>
+        <style>
+          img.integration {
+            position:absolute;
+            width:50%;
+            top: -300px;
+          }
+        </style>
+
+        <div id="integration" class="step" data-x="3500" data-y="-1000" data-rotate="270" data-scale="1">
+            <img src="images/travis-ci.png" class="integration"  style="left:0" alt="travis ci">
+            <img src="images/grunt.png" class="integration" alt="grunt">
+            <img src="images/npm.png" style="left:0; top:100px" class="integration" alt="npm">
+        </div>
+
+        <div id="not_perfect" class="step" data-x="-3500" data-y="-750" data-rotate="-30" data-scale="2">
+            <h1>but nobody's perfect...</h1>
+        </div>
+
+        <div id="debugging_challenges" class="step" data-x="5000" data-y="-1000" data-rotate="0" data-scale="1">
+            <img src="images/scared_bug.gif" alt="travis ci" style="width: 50%">
+        </div>
+
+        <div id="module_loading" class="step" data-x="5000" data-y="0" data-rotate="0" data-scale="1">
+            <h1>AMD vs. commonjs </h1>
+            <img src="images/module_loading_in_lego.jpg" alt="module loading in lego!">
+        </div>
+
+        <div id="missing_features" class="step" data-x="5000" data-y="1000" data-rotate="0" data-scale="1">
+          <h1>missing features</h1>
+            <img src="images/missing_features.png" alt="missing features" style="padding: 50px">
+        </div>
 
         <div id="moar" class="step" data-x="1400" data-y="-800" data-rotate="180" data-scale="2">
             <h1 class="center"><a href="http://theintern.io/">theintern.io</a></h1>
