@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            reveal.js - The HTML Presentation Framework
+        </title>
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../components/reveal.js/css/reveal.min.css" type="text/css">
+        <link rel="stylesheet" href="../components/reveal.js/css/theme/default.css" id="theme" type="text/css"><!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../components/reveal.js/lib/css/zenburn.css" type="text/css"><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+
+        <script type="text/javascript">
+document.write( '<link rel="stylesheet" href="../components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script><!--[if lt IE 9]>
+        <script src="../components/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+        .reveal section img {
+            background: none;
+            border: none;
+            box-shadow: none;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+    <section>
+        <section>
+            <h1>JS propaganda for java devs</h1>
+<div>
+            <br>
+            </div>
+<div>Static Typing in vanilla.js</div>
+        </section>
+        <section>
+            <h2>Not really...</h2>
+<img style="width: 60%" src="images/Troll_Face.png">
+        </section>
+        <section>
+            <h2>What are the benefits of static typing?</h2>
+<div>
+            <br>
+        </div>
+<div>
+<ul>
+<li>possibility for optimisation based on types</li>
+<li>potentially earlier detection of bugs</li>
+<li>easier for an IDE to infer + suggest</li>
+<li>automated documentation</li>
+</ul>
+<div style="text-align: left;">
+        <br>
+    </div>
+</div>
+<div style="text-align: left;">
+</div>
+</section>
+</section>
+<section>
+    <section>
+        <h2>breaking stuff is bad</h2>
+<div>
+    <br>
+</div>
+<div>
+    <img src="images/breakingbad_lego.png">
+        <br>
+</div>
+</section>
+        <section>
+            <h2>what do we have?</h2>
+<img src="images/jshint.png">
+            <div>
+    <img style="width: 30%" src="images/idea.png">
+            <br>
+</div>
+
+
+</section>
+            <section>
+                <h2>
+    <img style="width: 25%" src="images/idea.png">
+                <span>+&nbsp;</span>
+    <b style="color: rgb(1, 111, 187);">@use JSDoc</b>
+</h2>
+<div>
+    <h2 style="font-style: normal; font-variant: normal;">=</h2>
+</div>
+<div>
+    <img src="images/amazing.gif">
+</div>
+
+
+</section>
+                <section>
+                    <h2>demo</h2>
+<div>
+                    <br>
+                </div>
+<div>
+<img src="images/demo_beavis.gif">
+                <br>
+</div>
+            </section>
+            <section>
+                <h2 style="font-style: normal; font-variant: normal;">cheat sheet</h2>
+<div style="position:absolute; width:90%">
+<div id="codeSample" style="text-align:center">
+
+        <img src="images/inspectocat.png" alt="github inspectocat" style="
+    width: 10%;
+    position: absolute;
+    right: 0;
+    top: -40px;
+    margin:  0 20px;
+    z-index: 1000;
+">
+                <pre style="background:#000;color:#f8f8f8;border-radius: 20px; padding: 10px; font-size: 18px; width:100%"> 
+<span style="color:green">@param {type} name  </span>// describe a parameter
+<span style="color:green">@optional</span> //  to say argument 'name' doesn't need to be defined
+<span style="color:green">@return {type} </span>// define what a function should return (omit for void funcs)
+<span style="color:green">@const</span> // declare that a value should not be reassigned to
+<span style="color:green">@deprecated</span> // declare that a function shouldn't be used any more
+<span style="color:green">@constructor</span> // declare constructor
+<span style="color:green">@interface</span> // declare interface
+<span style="color:green">@implement name</span> // declare implementing an interface
+<span style="color:green">@extends name</span> // declare extending a class
+<span style="color:green">@param {String|Number} name</span> // define a param as a String or number
+<span style="color:green">@param {{myNum: number, kitten: String}} config</span> // define a param as obj literal
+<span style="color:green">@param {!Object} name</span> // describe a parameter as being non-nullable object
+         </pre>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+                <section>
+                    <h2>moar reading</h2>
+<div>
+                    <a href="http://usejsdoc.org/">project</a>
+                </div>
+<div>
+                <a href="https://github.com/jsdoc3/jsdoc">code @ GH</a>
+            </div>
+<div>talk from jsconfeu 2013 - TBA</div>
+<div>
+            <br>
+        </div>
+    </section>
+    <section>
+        <h2>
+<img src="images/thanks_pwny.png">
+        <br>
+</h2>
+<div>@vikkiread</div>
+    </section>
+</section>
+</div>
+
+            
+        </div>
+    <script src="../components/reveal.js/lib/js/head.min.js" type="text/javascript">
+</script><script src="../components/reveal.js/js/reveal.js" type="text/javascript">
+</script><script type="text/javascript">
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../components/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: '../components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+    </body>
+</html>
