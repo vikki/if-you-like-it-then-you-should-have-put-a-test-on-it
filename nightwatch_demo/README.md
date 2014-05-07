@@ -3,7 +3,7 @@
 ![Nightwatchjs](http://nightwatchjs.org/img/logo-nightwatch.png)
 
 ## This branch
-This is the **Simplest-With-Interaction** branch, and you're in the **nightwatch** folder, so here we would normally demonstrate the simplest possible headless test you can do in nightwatch. Unfortunately, its not possible to run nightwatch against phantom just yet - see [this issue](https://github.com/beatfactor/nightwatch/issues/73).To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
+This is the **Simplest-With-Real-Browser** branch, and you're in the **nightwatch** folder, so here we'll demonstrate the simplest possible real local browser(Chrome) test you can do in nightwatch.To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
 
 ## Running the tests
 ### Global Dependencies

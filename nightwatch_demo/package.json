@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Nighwatch demo tests, for comparison with other acceptance testing frameworks",
   "scripts": {
-    "test": "echo not possible - see readme"
+    "test": "nightwatch"
   },
   "repository": {
     "type": "git",
