@@ -1,0 +1,20 @@
+{
+  "name": "intern",
+  "version": "0.0.0",
+  "description": "Intern demo tests, for comparison with other acceptance testing frameworks",
+  "scripts": {
+    "test": "node node_modules/intern/runner.js config=intern_config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "intern": "~1.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/issues"
+  }
+}
