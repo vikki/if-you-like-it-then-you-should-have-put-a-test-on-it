@@ -3,7 +3,7 @@
 ![Dalek](https://avatars2.githubusercontent.com/u/3217446?s=160)
 
 ## This branch
-This is the **Simplest** branch, and you're in the **dalek_demo** folder, so here we'll demonstrate the simplest possible test you can do in dalek. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
+This is the **Simplest-With-Interaction** branch, and you're in the **dalek_demo** folder, so here we'll demonstrate the simplest possible interaction test you can do in dalek. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
 
 ## Running the tests
 ### Global Dependencies
