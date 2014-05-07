@@ -7,7 +7,7 @@
     "dalekjs": "0.0.8"
   },
   "scripts": {
-    "test": "dalek test/acceptance/test.js"
+    "test": "dalek test/acceptance/test.js -b chrome"
   },
   "repository": "https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit.git",
   "author": "Vikki <vikki.read@gmail.com>",
