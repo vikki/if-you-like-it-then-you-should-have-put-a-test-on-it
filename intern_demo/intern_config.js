@@ -22,13 +22,13 @@ define({
 	// OnDemand. Options that will be permutated are browserName, version, platform, and platformVersion; any other
 	// capabilities options specified for an environment will be copied as-is
 	environments: [
-		{ browserName: 'chrome', platform: [ 'ANY' ] }
+		{ browserName: 'phantom' }
 	],
 	// Maximum number of simultaneous integration tests that should be executed on the remote WebDriver service
 	maxConcurrency: 3,
 
 	// Whether or not to start Sauce Connect before running tests
-	useSauceConnect: true,
+	useSauceConnect: false,
 
 	// Connection information for the remote WebDriver service. If using Sauce Labs, keep your username and password
 	// in the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables unless you are sure you will NEVER be
