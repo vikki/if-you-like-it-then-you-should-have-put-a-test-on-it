@@ -1,0 +1,17 @@
+{
+    "browsers": [{
+        "chrome": {
+            "platform": "OS X 10.6",
+            "actAs": "chrome",
+            "version": 27
+        }
+    }],
+    "browser": "chrome",
+    "driver": ["sauce"],
+    "driver.sauce": {
+        "user": "SAUCE_USER_NAME",
+        "key": "SAUCE_ACCESS_KEY",
+        "name": "Guineapig",
+        "tags": ["dalek", "testproject"]
+    }
+}
