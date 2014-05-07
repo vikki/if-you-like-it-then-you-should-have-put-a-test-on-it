@@ -5,7 +5,12 @@ define([
 ], function (registerSuite, assert, require) {
 	registerSuite({name : 'demo',
 		'hello world test' : function () {
-			assert(true);
+            var url = 'http://www.google.com';
+
+            return this.remote
+                .get(url)
+                .elementByTagName('title')
+                .end();
 		}
 	});
 });

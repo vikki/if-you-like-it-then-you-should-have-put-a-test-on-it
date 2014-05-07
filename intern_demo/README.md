@@ -3,7 +3,7 @@
 ![Intern](https://avatars0.githubusercontent.com/u/3977877?s=160)
 
 ## This branch
-This is the **Simplest** branch, and you're in the **intern_demo** folder, so here we'll demonstrate the simplest possible test you can do in intern. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
+This is the **Simplest-With-Interaction** branch, and you're in the **intern_demo** folder, so here we'll demonstrate the simplest possible interaction test you can do in intern. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
 
 ## Running the tests
 ### Global Dependencies
