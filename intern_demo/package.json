@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Intern demo tests, for comparison with other acceptance testing frameworks",
   "scripts": {
-      "test": "phantomjs --webdriver 4444 --webdriver-loglevel='debug' & sleep 3 && node node_modules/intern/runner.js config=intern_config.js"
+      "test": "node node_modules/intern/runner.js config=intern_config.js"
   },
   "repository": {
     "type": "git",
