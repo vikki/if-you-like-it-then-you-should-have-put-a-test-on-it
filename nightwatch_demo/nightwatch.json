@@ -16,8 +16,10 @@
     "test_settings" : {
         "default" : {
             "launch_url" : "http://localhost",
-            "selenium_port"  : 4444,
-            "selenium_host"  : "localhost",
+            "selenium_port"  : 80,
+            "selenium_host"  : "ondemand.saucelabs.com",
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
             "silent": true,
             "firefox_profile": false,
             "chrome_driver": "",

@@ -3,7 +3,7 @@
 ![Nightwatchjs](http://nightwatchjs.org/img/logo-nightwatch.png)
 
 ## This branch
-This is the **Simplest-With-Interaction** branch, and you're in the **nightwatch** folder, so here we would normally demonstrate the simplest possible headless test you can do in nightwatch. Unfortunately, its not possible to run nightwatch against phantom just yet - see [this issue](https://github.com/beatfactor/nightwatch/issues/73).To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
+This is the **Simplest-Sauce** branch, and you're in the **nightwatch** folder, so here we'll demonstrate the simplest possible Sauce Labs test you can do in nightwatch. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
 
 ## Running the tests
 ### Global Dependencies
@@ -11,9 +11,7 @@ Nightwatch can be installed locally or globally. I usually find it most useful t
 
     npm install nightwatch -g
 
-You will also need to have a local [selenium server](http://docs.seleniumhq.org/download/) running (on the default port 4444) to get this basic test to work:
-
-    $ java -jar ./selenium-server-standalone-<VERSION>.jar
+You don't to run your own selenium server for this to work, as nightwatch and Sauce Labs handle all of this for you :)
 
 ### Project dependencies
 Right now there are no project dependencies for nightwatch, but if there were you could do this:
