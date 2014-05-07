@@ -3,7 +3,7 @@
 ![Nightwatchjs](http://nightwatchjs.org/img/logo-nightwatch.png)
 
 ## This branch
-This is the **Simplest** branch, and you're in the **nightwatch** folder, so here we'll demonstrate the simplest possible test you can do in nightwatch. To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
+This is the **Simplest-With-Interaction** branch, and you're in the **nightwatch** folder, so here we'll demonstrate the simplest possible interaction test you can do in nightwatch. To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
 
 ## Running the tests
 ### Global Dependencies
