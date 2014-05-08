@@ -9,7 +9,11 @@ define([
 
             return this.remote
                 .get(url)
-                .elementByTagName('title')
+                .elementById('gbqfsb')
+                .text()
+                .then(function assertTalksAboutFeelings (text) {
+                    assert.match(text, /feeling/i);
+                })
                 .end();
 		}
 	});

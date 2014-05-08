@@ -3,7 +3,9 @@
 ![Intern](https://avatars0.githubusercontent.com/u/3977877?s=160)
 
 ## This branch
-This is the **Simplest-Real-Browser** branch, and you're in the **intern_demo** folder, so here we'll demonstrate the simplest possible real local browser(Chrome) test you can do in intern. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
+This is the **Custom-Asserts** branch, and you're in the **intern_demo** folder, so here we'll demonstrate tests using custom asserts in intern. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
+Custom asserts are actually readily available in intern, via the this.remote.assert in tests, so this one's pretty simple - as ever see test.js for details.
+Here we're adding the assertion `assertTalksAboutFeelings`, using chai as that's already available in intern.
 
 ## Running the tests
 ### Global Dependencies
