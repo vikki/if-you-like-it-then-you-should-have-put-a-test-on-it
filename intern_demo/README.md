@@ -38,3 +38,5 @@ Once that's all done and your .travis.yml is checked in, you just need to push t
 
 
 Happy testing! <3
+
+Uh-oh, this might not work because its a subdirectory :(
