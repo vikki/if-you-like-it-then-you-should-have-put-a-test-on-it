@@ -1,4 +1,5 @@
 var path = require('path');
+var taf = require('../assertions/talksAboutFeelings');
 
 module.exports = {
 	'Page title is correct': function (test) {
@@ -7,6 +8,7 @@ module.exports = {
 		test
 			.open(url)
 			.assert.exists('title')
+            .assert.talksAboutFeelings('#gbqfsb', "I'm Feeling Lucky")
 			.done();
 	}
 };

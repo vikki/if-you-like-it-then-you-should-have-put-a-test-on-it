@@ -5,7 +5,8 @@
   "dependencies": {},
   "devDependencies": {
     "dalekjs": "0.0.8",
-    "dalek-browser-chrome": "0.0.10"
+    "dalek-browser-chrome": "0.0.10",
+    "chai": "~1.9.1"
   },
   "scripts": {
     "test": "dalek test/acceptance/test.js -b chrome"
