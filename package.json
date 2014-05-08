@@ -1,9 +1,9 @@
 {
-  "name": "nightwatch",
+  "name": "nightwatch_demo",
   "version": "0.0.0",
   "description": "Nighwatch demo tests, for comparison with other acceptance testing frameworks",
   "scripts": {
-    "test": "nightwatch"
+    "test": "node_modules/nightwatch/bin/nightwatch"
   },
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "nightwatch": "~0.4.15"
   },
   "bugs": {
     "url": "https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/issues"
