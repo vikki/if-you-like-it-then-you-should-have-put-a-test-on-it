@@ -7,6 +7,7 @@ module.exports = {
 		test
 	    	.url(url)
 	    	.assert.elementPresent('title')
+	    	.assert.talksAboutFeelings('#gbqfsb')
 	    	.end();
 	}
 };

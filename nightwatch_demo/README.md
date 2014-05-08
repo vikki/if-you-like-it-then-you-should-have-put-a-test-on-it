@@ -3,7 +3,14 @@
 ![Nightwatchjs](http://nightwatchjs.org/img/logo-nightwatch.png)
 
 ## This branch
-This is the **Simplest-With-Real-Browser** branch, and you're in the **nightwatch** folder, so here we'll demonstrate the simplest possible real local browser(Chrome) test you can do in nightwatch.To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
+This is the **Custom-Asserts** branch, and you're in the **nightwatch** folder, so here we'll demonstrate tests using custom asserts in nightwatch. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
+
+There are actually a few ways of adding custom assertions - I've demo-ed the more complicated, more powerful version, but either works.
+Actions take callbacks which may contain assertions, which is a really simple way of adding new custom assertions, or you can extend the assert api using custom assertions.
+To add a custom assertion:
+  - Use the pattern [here](http://nightwatchjs.org/guide#custom-assertions) to create a custom assertion - we did that in this repo with `talksAboutFeelings.js` (which checks that the given element's text includes "feelings" :P)
+  - Register it under `custom_assertions_path` in `nightwatch.json`
+  - Use it in your tests - so if you created assertions/likesTesting.js that would wind up being test.assert.likesTesting()
 
 ## Running the tests
 ### Global Dependencies
