@@ -4,7 +4,8 @@
   "description": "Dalek demo tests, for comparison with other acceptance testing frameworks",
   "dependencies": {},
   "devDependencies": {
-    "dalekjs": "0.0.8"
+    "dalekjs": "0.0.8",
+    "dalek-browser-chrome": "0.0.10"
   },
   "scripts": {
     "test": "dalek test/acceptance/test.js -b chrome"
