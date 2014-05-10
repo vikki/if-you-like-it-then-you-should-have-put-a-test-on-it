@@ -3,7 +3,12 @@
 ![Nightwatchjs](http://nightwatchjs.org/img/logo-nightwatch.png)
 
 ## This branch
-This is the **Simplest-With-Real-Browser** branch, and you're in the **nightwatch** folder, so here we'll demonstrate the simplest possible real local browser(Chrome) test you can do in nightwatch.To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
+This is the **Custom-Actions** branch, and you're in the **nightwatch** folder, so here we'll demonstrate tests using custom asserts in nightwatch. To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
+Nightwatch has a pretty friendly API set up for adding custom actions, so this one's pretty easy. Just create a module following the syntax outlined [here](http://nightwatchjs.org/guide#custom-commands),
+tell the `nightwatch.json` about it under the `commands` section, and then it will be available in your tests.
+There is a small gotcha here though; nightwatch doesn't use promises, so the approaches to sync and async actions are quite different - there are examples of both under commands though.
+Sync is pretty simple, but often you'll want to do things asynchronously - to achieve this with nightwatch actions you'll need to have your custom action inherit from EventEmitter
+and emit a 'complete' event when its finished - see addTwoAsync.js for an example.
 
 ## Running the tests
 ### Global Dependencies

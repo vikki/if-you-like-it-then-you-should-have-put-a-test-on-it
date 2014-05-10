@@ -1,7 +1,7 @@
 {
     "src_folders" : ["test/acceptance"],
     "output_folder" : "reports",
-    "custom_commands_path" : "",
+    "custom_commands_path" : "test/commands",
     "custom_assertions_path" : "",
     "globals_path" : "",
 
