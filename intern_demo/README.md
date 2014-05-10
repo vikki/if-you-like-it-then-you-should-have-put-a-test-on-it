@@ -3,7 +3,12 @@
 ![Intern](https://avatars0.githubusercontent.com/u/3977877?s=160)
 
 ## This branch
-This is the **Simplest-Real-Browser** branch, and you're in the **intern_demo** folder, so here we'll demonstrate the simplest possible real local browser(Chrome) test you can do in intern. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
+This is the **Custom-Actions** branch, and you're in the **intern_demo** folder, so here we'll demonstrate tests using custom asserts in intern. To see what else is available go back to [master](https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it/tree/master).
+So intern doesn't currently have a clear API for adding custom actions (though there are plans [to change this](http://www.sitepen.com/blog/2014/05/07/whats-next-for-intern/)),
+but it is possible to add custom actions yourself, by creating and requiring a module that extends the remote object that's used to drive the tests
+(this is the object that provides webdriver functions to the test) .
+I've included very trivial examples to show you how you might add your own custom actions, either synchronous or asynchronous.
+They're basically all async because intern uses promises extensively, but that's not the case for all the libraries, so I've included both examples for consistency.
 
 ## Running the tests
 ### Global Dependencies
