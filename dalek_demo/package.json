@@ -5,10 +5,11 @@
   "dependencies": {},
   "devDependencies": {
     "dalekjs": "0.0.8",
-    "dalek-browser-chrome": "0.0.10"
+    "dalek-browser-chrome": "0.0.10",
+    "q": "~1.0.1"
   },
   "scripts": {
-    "test": "dalek test/acceptance/test.js -b chrome"
+    "test": "dalek test/acceptance/test.js -b chrome -l 4"
   },
   "repository": "https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit.git",
   "author": "Vikki <vikki.read@gmail.com>",
