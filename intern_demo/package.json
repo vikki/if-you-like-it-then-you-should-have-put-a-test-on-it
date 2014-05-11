@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Intern demo tests, for comparison with other acceptance testing frameworks",
   "scripts": {
-      "test": "node node_modules/intern/runner.js config=intern_config.js"
+    "test": "grunt intern"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "intern": "~1.6.0"
+    "intern": "~1.6.0",
+    "grunt": "~0.4.4"
   },
   "bugs": {
     "url": "https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/issues"
