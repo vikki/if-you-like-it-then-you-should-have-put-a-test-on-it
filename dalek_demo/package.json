@@ -5,10 +5,12 @@
   "dependencies": {},
   "devDependencies": {
     "dalekjs": "0.0.8",
-    "dalek-browser-chrome": "0.0.10"
+    "dalek-browser-chrome": "0.0.10",
+    "grunt-dalek": "~0.2.0",
+    "grunt": "~0.4.4"
   },
   "scripts": {
-    "test": "dalek test/acceptance/test.js -b chrome"
+    "test": "grunt dalek"
   },
   "repository": "https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit.git",
   "author": "Vikki <vikki.read@gmail.com>",
