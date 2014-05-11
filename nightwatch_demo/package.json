@@ -1,9 +1,9 @@
 {
-  "name": "nightwatch",
+  "name": "nightwatch_demo",
   "version": "0.0.0",
   "description": "Nighwatch demo tests, for comparison with other acceptance testing frameworks",
   "scripts": {
-    "test": "nightwatch"
+    "test": "grunt nightwatch"
   },
   "repository": {
     "type": "git",
@@ -12,6 +12,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "grunt-nightwatch": "~0.1.8",
+    "grunt": "~0.4.4"
   },
   "bugs": {
     "url": "https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/issues"

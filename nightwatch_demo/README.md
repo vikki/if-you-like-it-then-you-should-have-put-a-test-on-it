@@ -3,7 +3,10 @@
 ![Nightwatchjs](http://nightwatchjs.org/img/logo-nightwatch.png)
 
 ## This branch
-This is the **Simplest-With-Real-Browser** branch, and you're in the **nightwatch** folder, so here we'll demonstrate the simplest possible real local browser(Chrome) test you can do in nightwatch.To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
+This is the **Grunt** branch, and you're in the **nightwatch** folder, so here we'll demonstrate setting up **nightwatch** tests with grunt.To see what else is available go back to [master](https://github.com/vikki/ifyoulikeitthenyoushouldhaveputatestonit/tree/master).
+Nightwatch doesn't bundle grunt support but there's an npm module [grunt-nightwatch](https://www.npmjs.org/package/grunt-nightwatch) that supports
+setting up your tests with grunt. You use this in the normal grunt plugin way (`npm install` it, load the task in your `gruntfile`, then configure the options) - see `Gruntfile.js` for an example,
+but its basically moving your `nightwatch.json` into Grunt. Unfortunately the plugin isn't working right now, as there are [some issues](https://github.com/pateketrueke/grunt-nightwatch/issues/12) with running the current version right now but hopefully these will be resolved soon :)
 
 ## Running the tests
 ### Global Dependencies
