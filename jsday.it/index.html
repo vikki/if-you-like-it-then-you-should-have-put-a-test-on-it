@@ -1,0 +1,410 @@
+<!doctype html>
+
+<!--
+
+    Welcome to the light side of the source, young padawan.
+
+    One step closer to learn something interesting you are...
+
+                               ____                  
+                            _.' :  `._               
+                        .-.'`.  ;   .'`.-.           
+               __      / : ___\ ;  /___ ; \      __  
+             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
+             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
+                  `:-.._J '-.-'L__ `-.-' L_..-;'     
+                    "-.__ ;  .-"  "-.  : __.-"       
+                        L ' /.======.\ ' J           
+                         "-.   "__"   .-"            
+                        __.l"-:_JL_;-";.__           
+                     .-j/'.;  ;""""  / .'\"-.        
+                   .' /:`. "-.:     .-" .';  `.      
+                .-"  / ;  "-. "-..-" .-"  :    "-.   
+             .+"-.  : :      "-.__.-"      ;-._   \  
+             ; \  `.; ;                    : : "+. ; 
+             :  ;   ; ;                    : ;  : \: 
+             ;  :   ; :                    ;:   ;  : 
+            : \  ;  :  ;                  : ;  /  :: 
+            ;  ; :   ; :                  ;   :   ;: 
+            :  :  ;  :  ;                : :  ;  : ; 
+            ;\    :   ; :                ; ;     ; ; 
+            : `."-;   :  ;              :  ;    /  ; 
+             ;    -:   ; :              ;  : .-"   : 
+             :\     \  :  ;            : \.-"      : 
+              ;`.    \  ; :            ;.'_..-=  / ; 
+              :  "-.  "-:  ;          :/."      .'  :
+               \         \ :          ;/  __        :
+                \       .-`.\        /t-""  ":-+.   :
+                 `.  .-"    `l    __/ /`. :  ; ; \  ;
+                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
+                    \ / .-"   /.     .'.' ;_:'    ;  
+                     :-""-.`./-.'     /    `.___.'   
+                           \ `t  ._  /               
+                            "-.t-._:'                
+
+-->
+
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>If You Like It Then You Should Have Put A Test On It | Front End Acceptance Test Frameworks Comparison | by Vikki Read @vikkiread</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+    <link href="../components/impress.js/css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<style>
+  .step {
+    text-align: center;
+  }
+ 
+  .code {
+    font-size: 38px;
+    text-align: left;
+  }
+
+  #codeSample pre{
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 24px;
+  }
+
+  .comment {
+    color:grey;
+  }
+
+  #lightning {
+   position: absolute;
+   top: 0;
+   right: -270px;
+  }
+
+@-webkit-keyframes highlight {
+	0%, 100% {color: Black;}
+	50% {color: Red;}
+}
+
+@-webkit-keyframes flash {
+	0%, 50%, 100% {opacity :1;}
+	25%, 75% {opacity: 0;}
+}
+
+@-webkit-keyframes correct {
+  0%{ font-size: 100%;}
+  100% { font-size: 30%;}
+}
+
+@-webkit-keyframes erratic_flash {
+  0%, 25%, 100% {color :green;}
+  13%, 75% {color: red;}
+}
+
+.highlight{
+   -webkit-animation-name: highlight;
+   -webkit-animation-duration: 5s;
+}
+
+.active .non_deterministic_tests {
+  color: green;
+  -webkit-animation-name: erratic_flash;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-delay: 2s;
+}
+
+.active .fade_in_2 {
+  -webkit-transition-delay: 1s;
+}
+.active .fade_in_3 {
+  -webkit-transition-delay: 2s;
+}
+.active .fade_in_4 {
+  -webkit-transition-delay: 3s;
+}
+
+.fade_in {
+  -webkit-transition: all 2s ease-in-out;
+  opacity: 0;
+}
+
+.active .fade_in {
+  opacity: 1;
+}
+
+.hide {
+   display:none;
+}
+
+.pwniez {
+  width: 20%;
+  padding: 5px 30px;
+}
+
+div[data-activate] {
+  -webkit-transition: all 5s ease-in-out;
+}
+
+</style>
+
+<div id="impress">
+        <div id="intro" class="step" data-x="2000" data-y="1000" data-rotate="90" data-scale="3">
+            <h1 class="center">If you like it</h1>
+            <h1 class="center">then you shoulda put a test on it </h1>
+        </div>
+        <div id="big" class="step" data-x="3800" data-y="1000" data-rotate="180" data-scale="2">
+            <h2>Modern acceptance testing</h2>
+        </div>
+
+        <div id="why_bother" class="step" data-x="3800" data-y="600" data-rotate="180" data-scale="2">
+            <h2>Why bother?</h2>
+        </div>
+
+        <div id="confidence" class="step" data-x="400" data-y="600" data-rotate="0" data-scale="1">
+            <h1>confidence</h1>
+        </div>
+        <div id="refactoring" class="step" data-x="400" data-y="1200" data-rotate="0" data-scale="1">
+            <span class="comment">refactorCodeExamples()</span>
+            <span class="comment">refactorSlides()</span>
+            <span class="comment">dontForgetToHowToSpeak()</span>
+
+            <span class="comment">prepareForPresentation()</span>
+            <h1>refactoring</h1>
+        </div>
+        <div id="documentation" class="step" data-x="400" data-y="1800" data-rotate="0" data-scale="1">
+
+            <span class="comment">&lt;!-- TODO: Improve presentation -- &gt;</span>
+            <h1>documentation</h1>
+        </div>
+    
+        <div id="selenium" class="step" data-x="-1500" data-y="1500" data-rotate="30" data-scale="2">
+            <h1>Can't you just use $older_lib?</h1>
+        </div>
+
+       <div>
+       <div id="ctx_switching" class="step" data-x="800" data-y="3000" data-rotate="270" data-scale="1">
+            <h1>Context switching</h1>
+            <div class="comment">var foo = 'foo';</div>
+            <div class="comment">//dammit!</div>
+            <div class="comment">String foo = "foo";</div>
+        </div>
+        <div id="slow" class="step" data-x="1500" data-y="3000" data-rotate="270" data-scale="1">
+            <h1>sloooooooooooooooo<span class="fade_in fade_in_1">o</span><span class="fade_in fade_in_2">o</span><span class="fade_in fade_in_3">o</span><span class="fade_in fade_in_4">w</span></h1>
+        </div>
+        <div id="failures" class="step" data-x="2200" data-y="3000" data-rotate="270" data-scale="1">
+            <h1 class="non_deterministic_tests">non-deterministic failures</h1>
+        </div>
+        <div id="x_browser_woes" class="step" data-x="2800" data-y="3000" data-rotate="270" data-scale="1">
+            <h1>x-browser woes</h1>
+            <img src="images/sad_ie.png" style="position:absolute; width:30%; left:0"></img>
+        </div>
+        <div id="infra_maintenance" class="step" data-x="3300" data-y="3000" data-rotate="270" data-scale="1">
+            <h1>infrastructure maintenance</h1>
+        </div>
+        <div id="unnecessary_java" class="step" data-x="4200" data-y="3000" data-rotate="270" data-scale="1">
+            <h1>maven and java <span style="text-decoration: line-through">badness</span> redundant dependencies</h1>
+            <img src="images/buscemi_nodejs.gif" alt="how do you do, fellow kids?">
+        </div>
+
+      </div>
+
+      <div id="selenium_js" class="step" data-x="5500" data-y="3800" data-rotate="180" data-scale="2">
+          <h1 class="shadow center">selenium-webdriver on node</h1>
+      </div>
+
+      <div id="codeSample" class="step code" data-x="-1000" data-y="-800" data-rotate="180" data-scale="2" style="width:1450px">
+      <style>
+        pre.demo {
+          background:#000;
+          color:#f8f8f8;
+          padding: 10px;          
+          border: solid 5px #F8F8F8;
+        }
+      </style>
+
+              <img src="images/inspectocat.png" alt="github inspectocat" style="
+        width: 10%;
+        position: absolute;
+        right: 0;
+        top: -45px;
+        margin-right: 40px;">
+
+
+
+      <div style="width:50%; float:right">
+              <pre class="demo"><span style="color:#65b042">'<span style="color:#89bdff">nightwatch</span>'</span> : <span style="color:#89bdff">function</span> (client) {
+    <span style="color:#3e87e3">client</span>
+          .url(<span style="color:#65b042">'https://www.github.com/'</span>)
+          .pause(<span style="color:#65b042">2000</span>)
+          .<span style="color:#dad085">assert.attributeEquals</span>(<span style="color:#65b042">'octocat'</span>, <span style="color:#65b042">'src'</span>, <span style="color:#65b042">'octocat.png'</span>)
+          .end();</pre>
+       </div>
+
+      <div style="width:50%; float:right">
+              <pre class="demo"><span style="color:#65b042">'<span style="color:#89bdff">dalek</span>'</span> : <span style="color:#89bdff">function</span> (test) {
+    <span style="color:#3e87e3">test</span>
+          .open(<span style="color:#65b042">'https://www.github.com/'</span>)
+          .waitFor(<span style="color:#65b042">'!!github.ready'</span>)
+          .<span style="color:#dad085">assert.attr</span>(<span style="color:#65b042">'octocat'</span>, <span style="color:#65b042">'src'</span>, <span style="color:#65b042">'octocat.png'</span>)
+          .done();</pre>
+       </div>
+
+               <div style="width:50%; margin: auto; clear:both">
+        <!-- TODO refactor into css :after/:before-->
+    
+             <pre class="demo"><span style="color:#65b042">'<span style="color:#89bdff">intern</span>'</span> : <span style="color:#89bdff">function</span> () {
+    <span style="color:#e28964">return</span> <span style="color:#3e87e3">this</span>.remote
+          .get(<span style="color:#65b042">'https://www.github.com/'</span>)
+          .waitUntilTrue(<span style="color:#65b042">'!!github.ready'</span>)
+          .elementById(<span style="color:#65b042">'octocat'</span>)
+          .<span style="color:#dad085">getAttribute</span>(<span style="color:#65b042">'src'</span>)
+          .then(<span style="color:#99cf50"> function</span> (src) {
+              expect(src).to.equal(<span style="color:#65b042">'octocat.png'</span>);
+          });</pre>
+       </div>
+
+ 
+
+
+      </div>
+
+      <div id="webdriver" class="step" data-x="-1500" data-y="2600" data-rotate="0" data-scale="2">
+        webdriver-based
+      </div>
+
+      <div id="chainable" class="step" data-x="-1500" data-y="3600" data-rotate="0" data-scale="2">
+        <div>expressive chainable interface</div>
+        <div>BDD-style</div>
+      </div>
+
+      <div id="node" class="step" data-x="-1500" data-y="4600" data-rotate="0" data-scale="2">
+        <div>node</div>
+      </div>
+
+      <div id="module_loading" class="step" data-x="5500" data-y="0" data-rotate="0" data-scale="1">
+            <h1>AMD vs. commonjs </h1>
+            <img src="images/module_loading_in_lego.jpg" alt="module loading in lego!">
+      </div>
+
+      <div id="external_config" class="step" data-x="5500" data-y="700" data-rotate="0" data-scale="1">
+            <h1>external config</h1>
+      </div>
+
+      <div id="sauce_support" class="step" data-x="5500" data-y="1400" data-rotate="0" data-scale="1">
+            <img src="images/sauce_labs_logo.png" alt="sauce labs"></img>
+      </div>
+
+      <div id="customisation" class="step" data-x="5500" data-y="2400" data-rotate="0" data-scale="1">
+            <h1>customisation</h1>
+      </div>
+
+        <div id="missing" class="step" data-x="3100" data-y="-1000" data-rotate="-30" data-scale="2">
+            <h1>what's missing?</h1>
+        </div>
+
+        <div id="debugging_challenges" class="step" data-x="4200" data-y="-1500" data-rotate="-90" data-scale="1">
+            <h1> debugging challenges </h1> <!-- ants? -->
+        </div>
+
+        <div id="promises" class="step" data-x="4800" data-y="-1500" data-rotate="-90" data-scale="1">
+            <img src="images/fuckinghatethenns.gif" alt="thens" style="width: 50%">
+        </div>
+
+        <div id="verifying_urls" class="step" data-x="5500" data-y="-1500" data-rotate="-90" data-scale="1">
+          <h1>Verifying Urls</h1>
+          <h1 class="center"><a href="https://github.com/vikki/dalekmob">dalekmob</a></h1>
+          <h1 class="center"><a href="https://github.com/vikki/nightmob">nightmob</a></h1>
+          <h1 class="center"><a href="https://github.com/vikki/internmob">internmob</a></h1>
+        </div>
+
+        <div id="moar" class="step" data-x="1400" data-y="-1400" data-rotate="180" data-scale="2">
+            <h1> Mille grazie! &lt;3 </h1>
+            
+            <h1 class="center"><a href="https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it"> Framework Comparison / How To on Github</a></h1>
+        </div>
+ 
+        <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+        </div>
+</div>
+    
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="../components/jquery/jquery.js"></script>
+<script>
+(function() {
+  $('[data-activate]').addClass('hide');
+  var stepNo = 1;
+
+  function showNextStep() {
+      $('[data-activate]').addClass('hide');
+      $('[data-activate="' + stepNo + '"]').removeClass('hide').addClass('highlight');
+      stepNo++;
+  }
+
+  document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 72) { // h
+       showNextStep();
+    }
+  });
+}
+())
+</script>
+
+
+<script src="../components/impress.js/js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+
