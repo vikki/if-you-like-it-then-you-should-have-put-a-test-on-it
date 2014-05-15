@@ -97,6 +97,35 @@
    right: -270px;
   }
 
+.text-glow  a{
+  -webkit-transition: all 0s ease-in;
+  transition: all 0 ease-in;
+  -moz-transition: all 0 ease-in;
+  -o-transition: all 0.3s ease-in;
+  text-decoration: none !important;
+  color: #FFF !important;
+  background:none !important;
+  text-shadow: inherit !important;
+}
+
+.text-glow {
+  font-size: 4em;
+  color: #FFF !important;
+  font-family: Arial;
+}
+
+.text-glow {
+   -webkit-stroke-width: 5.3px !important;
+   -webkit-stroke-color: #FFFFFF !important;
+   -webkit-fill-color: #FFFFFF !important;
+   text-shadow: 1px 0px 20px yellow !important;
+   -webkit-transition: width 0.3s ; /*Safari & Chrome*/
+   transition: width 0.3s;
+   -moz-transition: width 0.3s; /* Firefox 4 */
+   -o-transition: width 0.3s; /* Opera */
+   }
+
+
 @-webkit-keyframes highlight {
 	0%, 100% {color: Black;}
 	50% {color: Red;}
@@ -105,6 +134,11 @@
 @-webkit-keyframes flash {
 	0%, 50%, 100% {opacity :1;}
 	25%, 75% {opacity: 0;}
+}
+
+@-webkit-keyframes erase {
+  0%{ font-size: 100%;}
+  100% { font-size: 30%;}
 }
 
 @-webkit-keyframes correct {
@@ -117,9 +151,18 @@
   13%, 75% {color: red;}
 }
 
-.highlight{
-   -webkit-animation-name: highlight;
-   -webkit-animation-duration: 5s;
+@-webkit-keyframes erase {
+  0%{ text-decoration: none;}
+  100% { text-decoration: line-through;}
+}
+
+.comment.erase {
+  text-decoration: line-through;
+  -webkit-animation-name: correct;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+  //font-size: 30%;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .active .non_deterministic_tests {
@@ -144,6 +187,16 @@
   opacity: 0;
 }
 
+@font-face {
+font-family: Candy;
+src: url("fonts/CANDY___.otf") format("opentype");
+}
+
+#customisation {
+  font-family: 'Candy';
+  font-size: 2000%;
+}
+
 .active .fade_in {
   opacity: 1;
 }
@@ -164,7 +217,7 @@ div[data-activate] {
 </style>
 
 <div id="impress">
-        <div id="intro" class="step" data-x="2000" data-y="1000" data-rotate="90" data-scale="3">
+        <div id="intro" class="step" data-x="2000" data-y="1000" data-rotate="90" data-scale="2">
             <h1 class="center">If you like it</h1>
             <h1 class="center">then you shoulda put a test on it </h1>
         </div>
@@ -177,15 +230,16 @@ div[data-activate] {
         </div>
 
         <div id="confidence" class="step" data-x="400" data-y="600" data-rotate="0" data-scale="1">
-            <h1>confidence</h1>
+            <h1 class="text-glow"><a>confidence</a></h1>
         </div>
         <div id="refactoring" class="step" data-x="400" data-y="1200" data-rotate="0" data-scale="1">
-            <span class="comment">refactorCodeExamples()</span>
-            <span class="comment">refactorSlides()</span>
-            <span class="comment">dontForgetToHowToSpeak()</span>
-
-            <span class="comment">prepareForPresentation()</span>
             <h1>refactoring</h1>
+            <h2 class="comment erase">refactorCodeExamples()</h2>
+            <h2 class="comment erase">refactorSlides()</h2>
+            <h2 class="comment erase">dontForgetToHowToSpeak()</h2>
+
+            <h2 class="comment">prepareForPresentation()</h2>
+            
         </div>
         <div id="documentation" class="step" data-x="400" data-y="1800" data-rotate="0" data-scale="1">
 
@@ -194,28 +248,29 @@ div[data-activate] {
         </div>
     
         <div id="selenium" class="step" data-x="-1500" data-y="1500" data-rotate="30" data-scale="2">
-            <h1>Can't you just use $older_lib?</h1>
+            <h1>Can't you just use $lib?</h1>
         </div>
 
        <div>
-       <div id="ctx_switching" class="step" data-x="800" data-y="3000" data-rotate="270" data-scale="1">
+       <div id="ctx_switching" class="step" data-x="500" data-y="3000" data-rotate="270" data-scale="1">
             <h1>Context switching</h1>
-            <div class="comment">var foo = 'foo';</div>
-            <div class="comment">//dammit!</div>
+            <div class="comment erase">var foo = 'foo';</div>
+            <div class="comment erase">//dammit!</div>
             <div class="comment">String foo = "foo";</div>
         </div>
-        <div id="slow" class="step" data-x="1500" data-y="3000" data-rotate="270" data-scale="1">
+        <div id="slow" class="step" data-x="1200" data-y="3000" data-rotate="270" data-scale="1">
             <h1>sloooooooooooooooo<span class="fade_in fade_in_1">o</span><span class="fade_in fade_in_2">o</span><span class="fade_in fade_in_3">o</span><span class="fade_in fade_in_4">w</span></h1>
         </div>
-        <div id="failures" class="step" data-x="2200" data-y="3000" data-rotate="270" data-scale="1">
+        <div id="failures" class="step" data-x="1900" data-y="3000" data-rotate="270" data-scale="1">
             <h1 class="non_deterministic_tests">non-deterministic failures</h1>
         </div>
-        <div id="x_browser_woes" class="step" data-x="2800" data-y="3000" data-rotate="270" data-scale="1">
+        <div id="x_browser_woes" class="step" data-x="2500" data-y="3000" data-rotate="270" data-scale="1">
             <h1>x-browser woes</h1>
-            <img src="images/sad_ie.png" style="position:absolute; width:30%; left:0"></img>
+            <img src="images/sad_ie.png" style="position:absolute; width:30%; left:0; bottom: -100px"></img>
         </div>
         <div id="infra_maintenance" class="step" data-x="3300" data-y="3000" data-rotate="270" data-scale="1">
             <h1>infrastructure maintenance</h1>
+            <img src="images/maintenance_lego.png" style="position:absolute; width:30%; right:-50px; top: -200px"></img>
         </div>
         <div id="unnecessary_java" class="step" data-x="4200" data-y="3000" data-rotate="270" data-scale="1">
             <h1>maven and java <span style="text-decoration: line-through">badness</span> redundant dependencies</h1>
@@ -224,7 +279,7 @@ div[data-activate] {
 
       </div>
 
-      <div id="selenium_js" class="step" data-x="5500" data-y="3800" data-rotate="180" data-scale="2">
+      <div id="selenium_js" class="step" data-x="6000" data-y="4000" data-rotate="180" data-scale="2">
           <h1 class="shadow center">selenium-webdriver on node</h1>
       </div>
 
@@ -314,29 +369,29 @@ div[data-activate] {
             <h1>customisation</h1>
       </div>
 
-        <div id="missing" class="step" data-x="3100" data-y="-1000" data-rotate="-30" data-scale="2">
+        <div id="missing" class="step" data-x="3100" data-y="-800" data-rotate="-30" data-scale="2">
             <h1>what's missing?</h1>
         </div>
 
-        <div id="debugging_challenges" class="step" data-x="4200" data-y="-1500" data-rotate="-90" data-scale="1">
+        <div id="debugging_challenges" class="step" data-x="4500" data-y="-1500" data-rotate="-90" data-scale="1">
             <h1> debugging challenges </h1> <!-- ants? -->
         </div>
 
-        <div id="promises" class="step" data-x="4800" data-y="-1500" data-rotate="-90" data-scale="1">
+        <div id="promises" class="step" data-x="5300" data-y="-1500" data-rotate="-90" data-scale="1">
             <img src="images/fuckinghatethenns.gif" alt="thens" style="width: 50%">
         </div>
 
-        <div id="verifying_urls" class="step" data-x="5500" data-y="-1500" data-rotate="-90" data-scale="1">
-          <h1>Verifying Urls</h1>
+        <div id="verifying_urls" class="step" data-x="6000" data-y="-1500" data-rotate="-90" data-scale="1">
+          <h1>Verifying Url Requests</h1>
           <h1 class="center"><a href="https://github.com/vikki/dalekmob">dalekmob</a></h1>
           <h1 class="center"><a href="https://github.com/vikki/nightmob">nightmob</a></h1>
           <h1 class="center"><a href="https://github.com/vikki/internmob">internmob</a></h1>
         </div>
 
-        <div id="moar" class="step" data-x="1400" data-y="-1400" data-rotate="180" data-scale="2">
+        <div id="moar" class="step" data-x="1400" data-y="-1800" data-rotate="180" data-scale="2">
             <h1> Mille grazie! &lt;3 </h1>
             
-            <h1 class="center"><a href="https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it"> Framework Comparison / How To on Github</a></h1>
+            <h1 class="center"><a href="https://github.com/vikki/if-you-like-it-then-you-should-have-put-a-test-on-it"> Framework Comparison - bit.ly/putatestonit</a></h1>
         </div>
  
         <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
