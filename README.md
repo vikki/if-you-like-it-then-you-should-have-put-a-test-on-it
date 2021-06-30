@@ -1,4 +1,4 @@
-# If You Like It Then You Should Have Put A Test On It - Front End Acceptance Test Frameworks Comparison
+# If You Like It Then You Should Have Put A Test On It - Front End Acceptance Test Framework Comparison
 
 This repo is for the purposes of comparing front end acceptance test frameworks, as there are a few out there now, and they're all similar but different, and TBH I was having trouble keeping track :P This isn't here to keep score or find the *best* one; I genuinely think they're all pretty great, and this is a problem that is very much worth solving, and hugely appreciate the work that's gone into them all. However some might suit your use-case more than others, and I hadn't found that [spelt](http://english.stackexchange.com/questions/5712/spelt-vs-spelled) out anywhere, so I thought I'd made one. Enormously inspired by [TodoMVC](https://github.com/tastejs/todomvc).
 
